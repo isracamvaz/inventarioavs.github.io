@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empleados</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://kit.fontawesome.com/cd02f17c35.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="mb-5">
+        <nav >   
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>   
+            <a href="#" class="enlace">
+                <img src="img/logo.jpg" alt="AVS Logo" class="logo">
+            </a>        
+            <ul>
+                <li ><a href="../Inicio/inicio.html"><i class="inventario fa-solid fa-boxes-stacked"></i>Inventario</a></li>
+                <li><a href="../Historial/historial.html"><i class="historial fa-solid fa-clipboard"></i>Historial</a></li>
+                <li><a href="#" class="active"><i class="empleados fa-solid fa-clipboard-user"></i>Empleados</a></li>
+                <li ><a href="../Reporte/reporte.html"><i class="reporte fa-solid fa-receipt"></i>Reporte</a></li>
+                <li class="ajustes-perfil">
+                    <div>
+                        <a href="../Ajustes/ajustes.html"><i class="fa-solid fa-gear fa-2xl" style="color:#fff"></i></a>
+                        <a href="../Perfil/index.html"><i class="fa-solid fa-user fa-2xl" style="color:#fff"></i></a>
+                    </div>
+                </li>
+            </ul>   
+        </nav> 
+        <div class="container buscador mt-5">
+            <div class="row">
+                <form action="" class="d-flex  col">
+                    <input type="text" class="form-control me-2" aria-label="Buscar" placeholder="Buscar">
+                    <button class="btn" type="submit" style="background:#b80f22">Buscar</button>
+                </form>
+            </div>
+        </div> 
+    </header>
+
+    <section class="container ">
+        <div class="row">
+            <div class="col">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover table-sm table-bordered">
+                        <thead>
+                            <tr class="table-dark">
+                                <th>Nombre</th>
+                                <th>Cargo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Leonel Lopez</td>
+                                <td>Administrador</td>
+                            </tr>
+                            <tr>
+                                <td>Miguel López</td>
+                                <td>Administrador</td>
+                            </tr>
+                            <tr>
+                                <td>Rubén Campos</td>
+                                <td>Piloto Aviación</td>
+                            </tr>
+                            <tr>
+                                <td>Israel Campos</td>
+                                <td>Desarrollador Web</td>
+                            </tr>
+                            <tr>
+                                <td>Rodrigo López</td>
+                                <td>Administrador</td>
+                            </tr>
+                            <tr>
+                                <td>Mariel López</td>
+                                <td>Administrador</td>
+                            </tr>
+                            <tr>
+                                <td>Eugenio Isidro</td>
+                                <td>Almacenista</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 d-flex justify-content-center">
+                <a class="agregar-empleado" href="../Account/index.html">Agregar Empleado</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

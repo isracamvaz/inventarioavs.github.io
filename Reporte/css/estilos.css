@@ -1,0 +1,154 @@
+*{
+    padding: 0;
+    margin: o;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background: #1c0047;
+}
+
+header{
+    background: url(../img/fondo.jpg) no-repeat center top;
+     background-size: cover;
+    background-position: center top;
+}
+
+nav{
+    background: #b80f22;
+    height: 100px;
+    width: 100%;
+}
+ 
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+
+.logo{
+    height: 60px;
+    width: 60px;
+}
+
+nav ul{
+    float: right;
+    margin-right: 50px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 100px;
+    margin: 0 10px;
+   
+}
+
+nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav ul li a .inventario,nav ul li a .historial,nav ul li a .reporte,nav ul li a .empleados{
+    margin-right: 15px;
+    display: none;
+}
+
+li a.active, li a:hover{
+    background:#1c0047;
+    transition: .5s;
+}
+
+.checkbtn{
+    font-size: 40px;
+    color: #fff;
+    float: right;
+    line-height: 100px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+.buscador{
+    padding: 30px;
+}
+
+.reporte{
+    background: none;
+    border: none;
+    border-bottom: 3px solid #fff;
+    color: #55beec;
+    margin-bottom: 35px;
+    font-size: 20px;
+    float: right;
+}
+
+@media (max-width:990px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #1c0047;
+        top: 100px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    li a:hover,li a.active{
+        background: none;
+        color: #b80f22;
+    }
+
+    /*Cuando el check sea clickeado(en este caso el icono de la barrita) va a buscar al elemento ul*/
+    #check:checked ~ ul{
+        left: 0;
+        height: 100vh;
+        position: absolute;
+    }
+
+    #check:checked ~ nav ul li a .inventario,nav ul li a .historial,nav ul li a .reporte,nav ul li a .empleados,nav ul li a .inventario{
+        display: inline-block;
+    }
+
+    #check:checked ~ nav ul li a .inventario{
+        display: inline-block;
+    }
+
+    .reporte{
+        font-size: 15px;
+    }
+
+}

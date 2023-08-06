@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,20 +13,23 @@
             <div class="login-box col-12 col-sm-6 col-lg-3">
                 <img class="avatar" src="img/logo.jpg" alt="Logo de AVS">
                 <h1>Login Here</h1>
-                <form action="">
+                <form action="" id="form">
                     <label for="username">Username</label>
-                    <input type="text" placeholder="Enter Username">
+                    <input type="text" placeholder="Enter Username" id="name">
 
                     <label for="password">Password</label>
-                    <input type="password" placeholder="Enter Password">
+                    <input type="password" placeholder="Enter Password" id="password">
 
-                    <a href="Inicio/index.html"><input type="submit" value="Log In"></a>
+                    <button type="submit">Log In</button>
 
                     <a href="#">Lost your password</a><br>
-                    <a href="#">Don't have an account?</a>
+
+                    <p class="warnings" id="warnings"></p>
                 </form>
             </div>
         </div>
     </div>
+    <script src="funciones.js">
+    </script>
 </body>
 </html>

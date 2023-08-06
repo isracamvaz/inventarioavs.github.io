@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:url(../img/fondo.jpg) no-repeat center top fixed;
+    background-size:cover;
+    font-family: sans-serif;
+    height: 100vh;
+
+}
+
+.contenedor-titulo{
+    text-align: center;
+    margin: 15px;
+}
+
+h1{
+    color: #b80f22;
+}
+
+h2,h3{
+    color: #fff;
+}
+
+h3{
+    margin: 20px;
+    margin-top: 35px;
+}
+
+h4{
+    color: #f2f2f2;
+    margin: 15px;
+    
+}
+
+.version{
+    
+    float: right;
+}

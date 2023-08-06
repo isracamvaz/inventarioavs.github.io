@@ -54,8 +54,8 @@ nav ul li{
 nav ul li a{
     color: #fff;
     font-size: 20px;
-    padding: 7px 14px;
-    border-radius: 4px;
+    padding: 15px 20px;
+    border-radius: 15px;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -155,10 +155,6 @@ footer .redes-sociales .facebook:hover{
     }
 
     #check:checked ~ nav ul li a .inventario,nav ul li a .historial,nav ul li a .reporte,nav ul li a .empleados,nav ul li a .inventario{
-        display: inline-block;
-    }
-
-    #check:checked ~ nav ul li a .inventario{
         display: inline-block;
     }
 
