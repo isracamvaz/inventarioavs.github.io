@@ -66,6 +66,10 @@ li a.active, li a:hover{
     transition: .5s;
 }
 
+tbody{
+    cursor: pointer;
+}
+
 .checkbtn{
     font-size: 40px;
     color: #fff;
@@ -87,12 +91,122 @@ li a.active, li a:hover{
 .agregar-empleado{
     text-decoration: none;
     background: #b80f22;
-    border: 3px solid #fff;
     color: #fff;
+    border-radius: 5px;
     margin: 25px;
     padding: 10px;
     font-size: 20px;
     text-align: center;
+}
+
+.agregar-empleado:hover{
+    background: #000;
+}
+
+/*POPUP*/
+.overlay{
+    background: rgba(0,0,0,.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.overlay.active{
+    visibility: visible;
+}
+
+.popup{
+    background: #000;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.3);
+    border-radius: 3px;
+    font-family: sans-serif;
+    padding: 20px;
+    text-align: center;
+    width: 600px;
+    transition: .3s ease all;
+    transform: scale(0.7);  /*Tamano por defecto de la ventana sin estar activa, para las animaciones */
+    opacity: 0;
+}
+
+.popup .btn-cerrar-popup{
+    font-size: 16px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    color: #BBBBBB;
+    transition: .3s ease all;
+}
+
+.popup .btn-cerrar-popup:hover{
+    color: #b80f22;
+}
+
+.popup h3{
+    font-size: 36px;
+    font-weight: bold;
+    color: #b80f22;
+    margin-bottom: 10px;
+    opacity: 0;
+}
+
+.popup form .contenedor-inputs{
+    opacity: 0;
+}
+
+.popup form .contenedor-inputs input{
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 16px
+   
+}
+
+/*ANIMACIONES*/
+.popup.active{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.popup.active h3{
+    animation: entradaTitulo .8s ease .5s forwards;  /*con forwards el h3 se va a quedar con sus ultimas propiedades de la animacion */
+}
+
+.popup.active .contenedor-inputs{
+    animation: entradaInputs 1s ease 1s forwards;  /*con forwards el h3 se va a quedar con sus ultimas propiedades de la animacion */
+}
+
+@keyframes entradaTitulo{
+    from{
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        
+        opacity: 1;
+    }
+}
+
+@keyframes entradaInputs{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 
 @media (max-width:990px){

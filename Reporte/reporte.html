@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empleados</title>
+    <title>Reporte</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estilos.css">
     <script src="https://kit.fontawesome.com/cd02f17c35.js" crossorigin="anonymous"></script>
@@ -44,7 +44,7 @@
     <section class="container ">
         <div class="row">
             <div class="col-xs-2">
-                <button type="submit" class="reporte">Levantar reporte</button>
+                <button type="submit" class="reporte" id="abrir-popup">Levantar reporte</button>
             </div>
         </div>
         <div class="row">
@@ -96,5 +96,23 @@
             </div>
         </div>
     </section>
+
+    <div class="overlay" id="overlay">
+        <div class="popup" id="popup">
+            <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+            <h3>Reporte</h3> 
+            <form action="">
+                <div class="contenedor-inputs">
+                    Agregar imagen<input type="file" name="archivo" accept=".jpg,.jpeg,.png">
+                    <input class="subir" type="submit" name="subir" value="Subir">
+                </div>
+                <textarea placeholder="Mensaje:"></textarea>
+                <input class="enviar" type="submit" name="enviar" value="Enviar">
+            </form>
+        </div>
+    </div>
+
+       
+    <script src="popup.js"></script>
 </body>
 </html>

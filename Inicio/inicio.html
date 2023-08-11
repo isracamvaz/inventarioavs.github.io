@@ -54,7 +54,7 @@
                                 <th>Lugar</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="abrir-popup">
                             <tr>
                                 <td>Cuerpo de Camara</td>
                                 <td>SONY</td>
@@ -100,5 +100,39 @@
         </section>
     </footer>
 
+    <div class="overlay" id="overlay">
+        <div class="popup" id="popup">
+            <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+            <h3>Datos del Producto</h3> 
+            <form action="">
+                <div class="contenedor-inputs">
+                    <label for="nombre">Nombre</label>
+                    <input type="text">
+                    <label for="marca">Marca</label>
+                    <input type="text" >
+                    <label for="modelo">Modelo</label>
+                    <input type="text" >
+                    <label for="codigo">Código</label>
+                    <input type="text">
+                    <label for="origen">Origen</label>
+                    <input type="text" >
+                    <label for="lugar-actual">Lugar actual</label>
+                    <input type="text" >
+                    <label for="compra">Compra</label>
+                    <input type="text" >
+                    <label for="observaciones">Observaciones</label>
+                    <input type="text" >
+                    <label for="costo">Costo</label>
+                    <input type="text">
+                    <label for="accesorio-de">Accesorio de</label>
+                    <input type="text">
+                    <label for="proveedor">Proveedor</label>
+                    <input type="text">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
 </body>
 </html>
