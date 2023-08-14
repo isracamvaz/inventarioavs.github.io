@@ -1,15 +1,20 @@
 const API_URL = "https://avsinventoryswagger25.azurewebsites.net/api/v1/movimientos";
 
-fetch(API_URL)
-    .then(response => response.json())  
-    .then(movimientos => mostrarMovimientos())
-    .catch(err => console.log(err))
+const mostrarMovimientos = async(movimientos) => {
+    try{
+        const response = await fetch(API_URL, {
+            'mode': 'no-cors',
+            'headers': {
+                'Access-Control-Allow-Origin': '*',
+            }
+        })
+        console.log(response);
 
-    const mostrarMovimientos = (movimientos) => {
-        console.log(movimientos);
-        let body = ''
-        for (let i = 0; i < movimientos.length; i++){
-            body += `
+        if(response.status === 200) {
+            
+        let historial = ''
+        for (let i = 0; i < historial.length; i++) {
+            historial += `
             <tr>
                 <td>${movimientos[i].producto}</td>
                 <td>${movimientos[i].marca}</td>
@@ -18,6 +23,13 @@ fetch(API_URL)
             </tr>
             `
         }
-        document.getElementById('movimientos').innerHTML = body
-    }
+        document.getElementById('movimientos').innerHTML = historial
+    } else {
+        console.log('Error');
+    }  
+} catch(error){
+    console.log(error);
+}
+}
+
 

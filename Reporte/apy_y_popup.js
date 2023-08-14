@@ -1,25 +1,36 @@
 const API_URL = "https://avsinventoryswagger25.azurewebsites.net/api/v1/reportes";
 
-fetch(API_URL)
-    .then(response => response.json())  
-    .then(reportes => mostrarReportes())
-    .catch(err => console.log(err))
+const mostrarReportes = async(reportes) => {
+    try{
+        const response = await fetch(API_URL, {
+            'mode': 'no-cors',
+            'headers': {
+                'Access-Control-Allow-Origin': '*',
+            }
+        })
+        console.log(response);
 
-    const mostrarReportes = (reportes) => {
-        console.log(reportes);
-        let body = ''
-        for (let i = 0; i < reportes.length; i++){
-            body += `
+        if(response.status === 200) {
+            
+        let data = ''
+        for (let i = 0; i < data.length; i++) {
+            data += `
             <tr>
                 <td>${reportes[i].producto}</td>
                 <td>${reportes[i].marca}</td>
-                <td>${reportes[i].comentarios}</td>
+                <td>${reportes[i].comentario}</td>
                 <td>${reportes[i].lugar}</td>
             </tr>
             `
         }
-        document.getElementById('reportes').innerHTML = body
-    }
+        document.getElementById('reportes').innerHTML = data
+    } else {
+        console.log('Error');
+    }  
+} catch(error){
+    console.log(error);
+}
+}
 
 var btnAbrirPopup = document.getElementById('abrir-popup'),
     overlay = document.getElementById('overlay'),
