@@ -1,4 +1,4 @@
-const API_URL = "https://avsinventoryswagger25.azurewebsites.net/api/v1/movimientos";
+const API_URL = "https://avsinventoryswagger25.azurewebsites.net/api/v1/movimientos?limit=30&offset=1";
 
 const mostrarMovimientos = async(movimientos) => {
     try{
@@ -32,4 +32,4 @@ const mostrarMovimientos = async(movimientos) => {
 }
 }
 
-
+mostrarMovimientos();

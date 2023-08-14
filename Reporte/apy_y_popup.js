@@ -1,4 +1,4 @@
-const API_URL = "https://avsinventoryswagger25.azurewebsites.net/api/v1/reportes";
+const API_URL = "https://avsinventoryswagger25.azurewebsites.net/api/v1/reportes?limit=30&offset=1";
 
 const mostrarReportes = async(reportes) => {
     try{
@@ -31,6 +31,8 @@ const mostrarReportes = async(reportes) => {
     console.log(error);
 }
 }
+
+mostrarReportes();
 
 var btnAbrirPopup = document.getElementById('abrir-popup'),
     overlay = document.getElementById('overlay'),

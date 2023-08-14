@@ -1,5 +1,5 @@
 
-    const API_URL = "https://avsinventoryswagger25.azurewebsites.net/api/v1/dispositivos";
+    const API_URL = "https://avsinventoryswagger25.azurewebsites.net/api/v1/dispositivos?limit=30&offset=1";
 
     const mostrarDispositivos = async(dispositivos) => {
         try{
@@ -32,6 +32,8 @@
         console.log(error);
     }
 }
+
+mostrarDispositivos();
 
 var btnAbrirPopup = document.getElementById('abrir-popup'),
     overlay = document.getElementById('overlay'),
