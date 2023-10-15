@@ -78,6 +78,14 @@ button{
     color: darkgray
 }
 
+.warnings{
+    width: 300px;
+    text-align: center;
+    margin: auto;
+    color: #b80f22;
+    padding-top: 20px;
+    font-size: 12px;
+}
 
 .login-box a:hover{
     color: #fff;
